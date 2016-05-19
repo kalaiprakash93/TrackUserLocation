@@ -9,9 +9,9 @@
     <keywords>cordova,location,bootcomplete,restartapp</keywords>
     <repo></repo>
     <issue></issue>
-	<!--<js-module src="www/LocationPlugin.js" name="LocationPlugin">
+	<js-module src="www/LocationPlugin.js" name="LocationPlugin">
         <clobbers target="LocationPlugin" />
-    </js-module>-->
+    </js-module>
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
