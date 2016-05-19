@@ -20,6 +20,7 @@ public class LocationPlugin extends CordovaPlugin{
 				Toast.makeText(cordova.getActivity().getApplicationContext(), "first", Toast.LENGTH_SHORT).show();
 			cordova.getActivity().runOnUiThread(new Runnable() {
 			public void run() {
+				Toast.makeText(cordova.getActivity().getApplicationContext(), "second", Toast.LENGTH_SHORT).show();
 				if (!isServiceRunning()) {
 					Toast.makeText(cordova.getActivity().getApplicationContext(), "3rd", Toast.LENGTH_SHORT).show();
 					Intent serviceIntent = (new Intent(cordova.getActivity().getApplicationContext(), TrackUserLocationService.class));
