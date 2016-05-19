@@ -18,23 +18,14 @@ public class LocationPlugin extends CordovaPlugin{
 	}
 	public boolean execute(final String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
 				Toast.makeText(cordova.getActivity().getApplicationContext(), "first", Toast.LENGTH_SHORT).show();
-				if(action.equals("isServiceRunning"){
-				Toast.makeText(cordova.getActivity().getApplicationContext(), "second", Toast.LENGTH_SHORT).show();
-				cordova.getActivity().runOnUiThread(new Runnable() {
-				public void run() {
 				if (!isServiceRunning()) {
 					Toast.makeText(cordova.getActivity().getApplicationContext(), "3rd", Toast.LENGTH_SHORT).show();
 					Intent serviceIntent = (new Intent(cordova.getActivity().getApplicationContext(), TrackUserLocationService.class));
 					cordova.getActivity().getApplicationContext().startService(serviceIntent);
 					callbackContext.success("ok");
-				} else {
-					Toast.makeText(cordova.getActivity().getApplicationContext(), "else", Toast.LENGTH_SHORT).show();
-					callbackContext.success("error");
-				}
-			}
-		});
-		return true;
-		}
+				
+				return true;
+				} 
 	}
 	private boolean isServiceRunning()
 	{
