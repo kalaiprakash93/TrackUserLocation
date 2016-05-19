@@ -17,8 +17,6 @@ public class LocationPlugin extends CordovaPlugin{
 	public LocationPlugin(){
 	}
 	public boolean execute(final String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-                	cordova.getActivity().runOnUiThread(new Runnable() {
-			public void run() {
 				Toast.makeText(cordova.getActivity().getApplicationContext(), "first", Toast.LENGTH_SHORT).show();
 				if (!isServiceRunning()) {
 					Toast.makeText(cordova.getActivity().getApplicationContext(), "second", Toast.LENGTH_SHORT).show();
@@ -29,8 +27,6 @@ public class LocationPlugin extends CordovaPlugin{
 					Toast.makeText(cordova.getActivity().getApplicationContext(), "else", Toast.LENGTH_SHORT).show();
 					callbackContext.success("error");
 				}
-			}
-		});
 		return true;
 	}
 	private boolean isServiceRunning()
