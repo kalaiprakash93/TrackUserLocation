@@ -14,20 +14,26 @@ import android.os.Bundle;
 import org.apache.cordova.*;
 
 public class LocationPlugin extends CordovaPlugin{
-	private CallbackContext callback;
 	public static final int SERVICE_RUNNING = 1;
 	public static final int SERVICE_STOP = 0;
 	public LocationPlugin(){
 	}
-	public boolean execute(final String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-                		if (!isServiceRunning())
-                		{
-							Toast.makeText(cordova.getActivity().getApplicationContext(), "3rd", Toast.LENGTH_SHORT).show();
-							/*Intent serviceIntent =(new Intent(cordova.getActivity().getApplicationContext(), TrackUserLocationService.class));
-							cordova.getActivity().getApplicationContext().startService(serviceIntent);*/
-                			callback.success(SERVICE_RUNNING);
-                		}
-					}	
+	public boolean execute(final String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+                	cordova.getActivity().runOnUiThread(new Runnable() {
+			public void run() {
+				if (!isServiceRunning()) {
+					Toast.makeText(cordova.getActivity().getApplicationContext(), "3rd", Toast.LENGTH_SHORT).show();
+					Intent serviceIntent = (new Intent(cordova.getActivity().getApplicationContext(), TrackUserLocationService.class));
+					cordova.getActivity().getApplicationContext().startService(serviceIntent);
+					callbackContext.success(SERVICE_RUNNING);
+				} else {
+					Toast.makeText(cordova.getActivity().getApplicationContext(), "else", Toast.LENGTH_SHORT).show();
+					callbackContext.success(SERVICE_STOP);
+				}
+			}
+		});
+		return true;
+	}
 	private boolean isServiceRunning()
 	{
 		try 
@@ -41,7 +47,7 @@ public class LocationPlugin extends CordovaPlugin{
 			} 
 		} catch (Exception e)
 		{		
-			
+			Toast.makeText(cordova.getActivity().getApplicationContext(), "4th", Toast.LENGTH_SHORT).show();
 		}
 	    return false;
 	}
