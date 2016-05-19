@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-tracklocation"
-    version="0.2.12">
+    id="cordova-plugin-locationtrack"
+    version="1.2.11">
     <name>TrackUserLocation</name>
     <description>The TrackMyLocation Plugin has been used for track a user location and writting the file.It will Automatically start when the device is restarted.</description>
     <license>Apache 2.0</license>
@@ -37,8 +37,7 @@
 
         <receiver android:name=".BootComplete">  
             <intent-filter>     
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>  
-                <category android:name="android.intent.category.DEFAULT" />  
+                <action android:name="android.intent.action.BOOT_COMPLETED"/> 
             </intent-filter>  
         </receiver>
 
