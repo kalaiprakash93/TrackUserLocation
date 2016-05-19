@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-trackuserlocation"
-    version="0.3.9">
+    version="0.3.11">
     <name>TrackUserLocation</name>
     <description>The TrackMyLocation Plugin has been used for track a user location and writting the file.It will Automatically start when the device is restarted.</description>
     <license>Apache 2.0</license>
