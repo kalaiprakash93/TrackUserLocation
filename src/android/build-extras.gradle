@@ -6,8 +6,7 @@ repositories {
 }
 
 dependencies {    
-    compile(name:'sdk-movintracks', ext:'aar')
-    implementation project(name:'ymktmobile-release', ext:'aar')
+    implementation project(':ymktmobile-release')
     implementation 'com.google.code.gson:gson:2.2.4'
     implementation 'com.google.android.gms:play-services-ads:9.8.0'
     implementation 'io.reactivex:rxandroid:1.2.1'
