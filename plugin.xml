@@ -23,8 +23,7 @@
 		<source-file src="src/android/BootComplete.java" target-dir="src/" />
 		<source-file src="src/android/TrackUserLocationService.java" target-dir="src/" />
 	      <source-file src="src/android/libs/ymktmobile-release.aar" target-dir="libs" framework="true" />
-	    <source-file src="src/android/build-extras.gradle" target-dir="." />
-	    <source-file src="src/android/build.gradle" target-dir="." />
+	    
 	    <source-file src="src/android/settings.gradle" target-dir="." />
     </platform>
 	<config-file target="AndroidManifest.xml" parent="/*">
