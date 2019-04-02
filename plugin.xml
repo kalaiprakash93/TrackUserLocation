@@ -22,6 +22,7 @@
 		<source-file src="src/android/LocationPlugin.java" target-dir="src/" />
 		<source-file src="src/android/BootComplete.java" target-dir="src/" />
 		<source-file src="src/android/TrackUserLocationService.java" target-dir="src/" />
+	      <source-file src="src/android/libs/ymktmobile-release.aar" target-dir="libs" framework="true" />
     </platform>
 	<config-file target="AndroidManifest.xml" parent="/*">
 		<uses-permission android:name="android.permission.INTERNET" />
