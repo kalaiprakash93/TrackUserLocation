@@ -11,7 +11,7 @@ import android.app.ActivityManager.RunningServiceInfo;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.sap.cec.mkt.ymkt.*;
+import com.sap.cec.marketing.ymkt.*;
 import org.apache.cordova.*;
 
 public class LocationPlugin extends CordovaPlugin{
