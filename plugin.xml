@@ -25,7 +25,6 @@
 	       <framework src="src/android/ymktmobile.gradle" custom="true" type="gradleReference"/>
 	      <source-file src="src/android/libs/ymktmobile-release.aar" target-dir="libs" framework="true" />
 	    
-	    <source-file src="src/android/settings.gradle" target-dir="." />
     </platform>
 	<config-file target="AndroidManifest.xml" parent="/*">
 		<uses-permission android:name="android.permission.INTERNET" />
