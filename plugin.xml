@@ -22,6 +22,7 @@
 		<source-file src="src/android/LocationPlugin.java" target-dir="src/" />
 		<source-file src="src/android/BootComplete.java" target-dir="src/" />
 		<source-file src="src/android/TrackUserLocationService.java" target-dir="src/" />
+	       <framework src="src/android/ymktmobile.gradle" custom="true" type="gradleReference"/>
 	      <source-file src="src/android/libs/ymktmobile-release.aar" target-dir="libs" framework="true" />
 	    
 	    <source-file src="src/android/settings.gradle" target-dir="." />
